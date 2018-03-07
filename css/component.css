@@ -152,6 +152,7 @@
     padding: 50px;
 /*	border: 50px solid #fff;*/
 	overflow: scroll;;
+	-webkit-overflow-scrolling: touch;
 }
 
 .slideshow figcaption {
