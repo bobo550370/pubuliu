@@ -15,24 +15,16 @@
 	margin: 0;
 	padding: 0;
 }
-
-.grid-gallery figure {
-	margin: 0;
-}
-
+.grid-gallery figure {margin: 0;}
 .grid-gallery figure img {
 	display: block;
 	width: 100%;
 }
-
 .grid-gallery figcaption h3 {
 	margin: 0;
 	padding: 0 0 0.5em;
 }
-
-.grid-gallery figcaption p {
-	margin: 0;
-}
+.grid-gallery figcaption p {margin: 0;}
 
 /* Grid style */
 .grid-wrap {
@@ -40,27 +32,19 @@
 	margin: 64px auto;   
 }
 .grid {margin: 0 auto;}
-.grid li {
-	float: left;
-/*	cursor: pointer;*/
-}
+.grid li {float: left;}
 
 .grid figure {
 /*	padding: 15px 0;*/
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
-
-.grid li:hover figure {
-	opacity: 0.7;
-}
-
+.grid li:hover figure {opacity: 0.7;}
 .grid figcaption {
 	background: #e4e4e4;
-	padding: 25px;
     border-radius: 8px;
+    overflow: hidden;
 }
-
 /* Slideshow style */
 .slideshow {
 	position: fixed;
@@ -78,14 +62,12 @@
 	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
 	transition: opacity 0.5s, visibility 0s 0.5s;
 }
-
 .slideshow-open .slideshow {
 	opacity: 1;
 	visibility: visible;
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
-
 .slideshow ul {
 	width: 100%;
 	height: 100%;
@@ -96,17 +78,14 @@
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
 }
-
 .slideshow ul.animatable li {
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
 }
-
 .slideshow-open .slideshow ul {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
-
 .slideshow li {
 	width: 100%;
 	height: 100%;
@@ -117,10 +96,7 @@
 	visibility: hidden;
 }
 
-.slideshow li.show {
-	visibility: visible;
-}
-
+.slideshow li.show {visibility: visible;}
 .slideshow li:after {
 	content: '';
 	position: absolute;
@@ -132,27 +108,22 @@
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
-
 .slideshow li.current:after {
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
 	transition: opacity 0.3s, visibility 0s 0.3s;
 }
-
 .slideshow figure {
 	width: 100%;
 	height: 100%;
-	background: #fff;
+/*	background: #fff;*/
+    background-color: rgb(238, 238, 238);
     padding: 64px 16px;
 	overflow: scroll;;
     -webkit-overflow-scrolling: touch;
 }
-
-.slideshow figcaption {
-	padding-bottom: 20px;
-}
-
+.slideshow figcaption {padding-bottom: 20px;}
 .slideshow figcaption h3 {
 	font-weight: 300;
 	font-size: 200%;
@@ -164,22 +135,19 @@
 	z-index: 1000;
 	color: #59656c;
 	text-align: center;
-	padding: 3%;
+/*	padding: 3%;*/
 /*	cursor: pointer;*/
 	font-size: 2.2em;
 }
-
 .slideshow nav span.nav-prev,
 .slideshow nav span.nav-next {
-	bottom:-25px;
+    bottom: -16px;
+    margin: 0 8px;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
+    border: 1px #ebebeb solid;
 }
-
-.slideshow nav span.nav-next {
-	right: 0;
-}
-
+.slideshow nav span.nav-next {right: 0;}
 .slideshow nav span.nav-close {
 	color: #31373a;    
     top: 0;
@@ -192,9 +160,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-
 .icon:before,
 .icon:after {
 	font-family: 'fontawesome';
@@ -208,18 +174,11 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-span.nav-prev:before {
-	content: "\e601";
-}
-
-span.nav-next:before  {
-	content: "\e600";
-}
+span.nav-prev:before {content: "\e601";}
+span.nav-next:before  {content: "\e600";}
 
 /*
-span.nav-close:before {
-	content: "\e602";
-}
+span.nav-close:before {content: "\e602";}
 */
 
 /* Info on arrow key navigation */
@@ -235,7 +194,6 @@ span.nav-close:before {
 	letter-spacing: 1px;
 	text-align: center;
 }
-
 .info-keys:before,
 .info-keys:after {
 	position: absolute;
@@ -247,22 +205,18 @@ span.nav-close:before {
 	line-height: 14px;
 	font-size: 12px;
 }
-
 .info-keys:before {
 	left: 10px;
 	content: "\e603";
 }
-
 .info-keys:after {
 	right: 10px;
 	content: "\e604";
 }
-
 /* Example media queries (reduce number of columns and change slideshow layout) */
 @media screen and (max-width: 60em) {
 	/* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
 /*	.grid li {width: 33.3%;}*/
-
 	.slideshow li {
 		width: 100%;
 		height: 100%;
@@ -270,37 +224,32 @@ span.nav-close:before {
 		left: 0;
 		margin: 0;
 	}
-
 	.slideshow li figure img {
 		width: auto;
 		margin: 0 auto;
 		max-width: 100%;
 	}
-
 	.slideshow nav span,
 	.slideshow nav span.nav-close {
-		font-size: 1.8em;
-		padding: 0.3em;
+		font-size: 20px;
 	}
 
-	.info-keys {
-		display: none;
+	.slideshow nav span {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        padding: 15px 0;
+        background-color: #fff;  
 	}
-
+    .slideshow nav span:active {
+        background-color: #f3f3f3; 
+    }
+	.info-keys {display: none;}
 }
-
 /*
-@media screen and (max-width: 35em) {
-	.grid li {width: 50%;}
-}
-
-@media screen and (max-width: 24em) {
-	.grid li {width: 100%;}
-}
+@media screen and (max-width: 35em) {.grid li {width: 50%;}}
+@media screen and (max-width: 24em) {.grid li {width: 100%;}}
 */
-
-
-
 @media only screen and (min-width: 400px) {
     html {font-size: 21.33333333px !important;}
 }
@@ -310,10 +259,6 @@ span.nav-close:before {
 @media only screen and (min-width: 480px) {
     html {font-size: 25.6px !important;}
 }
-
-
-
-
 
 /*@media only screen and (min-width: 320px) {}*/
 /*@media only screen and (min-width: 375px) {}*/
