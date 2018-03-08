@@ -52,12 +52,50 @@
             border-radius: 50%;
             background-color: #999;
         }
+        .m-content {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .m-content-txt {flex: 1;margin: 0 16px;}
+        .m-content-img {width: 320px;margin: 0 16px;}
+        .m-content-img img {width: 100%;}
+        
+        
         .com-more:hover {background-color: #efefef;}
         @media only screen and (min-width: 320px) {
             .lo-navbar {
                 background: rgba(255,255,255,.9);
                 position: fixed;
             }
+        }
+        
+        /*如果屏幕小于等于400px*/
+        @media only screen and (max-width: 400px) {
+            .grid li {width: 100%;padding: 8px;}    
+            .grid-wrap {margin: 64px 8px;}
+            .m-content {flex-direction: column;}
+            .m-content-txt {margin: 0;}
+            .m-content-img {width: 100%;margin: 0 0 16px 0;}
+            .m-content-img img {width: 100%;}
+        }
+        @media only screen and (min-width: 401px) and (max-width: 703px) {
+            .grid li {width: 50%;padding: 8px;}
+            .grid-wrap {margin: 64px 8px;}
+            .m-content {flex-direction: column;}
+            .m-content-txt {margin: 0;}
+            .m-content-img {width: 100%;margin: 0 0 16px 0;}
+            .m-content-img img {width: 100%;}
+        }
+        @media only screen and (min-width: 704px) {
+            .grid li {width: 336px;padding: 8px;}
+            .slideshow figcaption,.grid-wrap {width: 1008px;}
+            .slideshow figcaption {margin: 0 auto;}
+        }
+        @media only screen and (min-width: 1056px) {
+        }
+        @media only screen and (min-width: 1408px) {
+            .grid-wrap {width: 1345px;}
         }
     </style>
 </head>
@@ -67,8 +105,7 @@
 <header>
     <div class="header">
         <div class="lo-navbar">
-            <div class="com-logo">
-                    
+            <div class="com-logo">     
             </div>
                 <div class="com-more">
                     <svg class="_5i" height="22" width="22" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" data-reactid="93"><title data-reactid="94"></title><path d="M12.00,9.00 C10.34,9.00 9.00,10.34 9.00,12.00 C9.00,13.66 10.34,15.00 12.00,15.00 C13.66,15.00 15.00,13.66 15.00,12.00 C15.00,10.34 13.66,9.00 12.00,9.00 M3.00,9.00 C4.66,9.00 6.00,10.34 6.00,12.00 C6.00,13.66 4.66,15.00 3.00,15.00 C1.34,15.00 0.00,13.66 0.00,12.00 C0.00,10.34 1.34,9.00 3.00,9.00 Z M21.00,9.00 C22.66,9.00 24.00,10.34 24.00,12.00 C24.00,13.66 22.66,15.00 21.00,15.00 C19.34,15.00 18.00,13.66 18.00,12.00 C18.00,10.34 19.34,9.00 21.00,9.00 Z" data-reactid="95"></path></svg>
@@ -280,24 +317,35 @@
     </section>
     <!-- // grid-wrap -->
     <section class="slideshow">
-      <div class="header "></div>
-      <div class="footer "></div>
+      <div class="header"></div>
+<!--      <div class="footer"></div>-->
       <ul>
         <li>
           <figure>
             <figcaption>
-              <h3>Letterpress asymmetrical</h3>
-              <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                  Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                  Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                  Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                  Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                  Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                  Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
-                </p>
+<!--              <h3>Letterpress asymmetrical</h3>-->
+                
+              <div class="m-content">
+                  <div class="m-content-img"> 
+                    <img src="img/large/1.png" alt="img01"/> 
+                  </div>
+                  <div class="m-content-txt">
+                    <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
+                    </p>
+                    <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
+                    </p>
+                    <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
+                    <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
+                    <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
+                    <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.
+                    </p>
+                      
+                  </div>
+              </div>
+              
+              
             </figcaption>
-            <img src="img/large/1.png" alt="img01"/> </figure>
+            </figure>
         </li>
         <li>
           <figure>
@@ -305,7 +353,8 @@
               <h3>Vice velit chia</h3>
               <p>Chillwave Echo Park Etsy organic Cosby sweater seitan authentic pour-over. Occupy wolf selvage bespoke tattooed, cred sustainable Odd Future hashtag butcher.</p>
             </figcaption>
-            <img src="img/large/2.png" alt="img02"/> </figure>
+<!--            <img src="img/large/2.png" alt="img02"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -313,7 +362,8 @@
               <h3>Brunch semiotics</h3>
               <p>IPhone PBR polaroid before they sold out meh you probably haven't heard of them leggings tattooed tote bag, butcher paleo next level single-origin coffee photo booth.</p>
             </figcaption>
-            <img src="img/large/3.png" alt="img03"/> </figure>
+<!--            <img src="img/large/3.png" alt="img03"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -321,7 +371,8 @@
               <h3>Chillwave nihil occupy</h3>
               <p>Vice cliche locavore mumblecore vegan wayfarers asymmetrical letterpress hoodie mustache. Shabby chic lomo polaroid, scenester 8-bit Portland Pitchfork VHS tote bag.</p>
             </figcaption>
-            <img src="img/large/4.png" alt="img04"/> </figure>
+<!--            <img src="img/large/4.png" alt="img04"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -329,7 +380,8 @@
               <h3>Kale chips lomo biodiesel</h3>
               <p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird on it craft beer Etsy.</p>
             </figcaption>
-            <img src="img/large/5.png" alt="img05"/> </figure>
+<!--            <img src="img/large/5.png" alt="img05"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -337,7 +389,8 @@
               <h3>Exercitation occaecat</h3>
               <p>Cosby sweater hella lomo Thundercats VHS occupy High Life. Synth pop-up readymade single-origin coffee, fanny pack tousled retro. Fingerstache mlkshk ugh hashtag, church-key ethnic street art pug yr.</p>
             </figcaption>
-            <img src="img/large/6.png" alt="img06"/> </figure>
+<!--            <img src="img/large/6.png" alt="img06"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -345,7 +398,8 @@
               <h3>Selfies viral four</h3>
               <p>Ethnic readymade pug, small batch XOXO Odd Future normcore kogi food truck craft beer single-origin coffee banh mi photo booth raw denim. XOXO messenger bag pug VHS. Forage gluten-free polaroid, twee hoodie chillwave Helvetica.</p>
             </figcaption>
-            <img src="img/large/1.png" alt="img01"/> </figure>
+<!--            <img src="img/large/1.png" alt="img01"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -353,7 +407,8 @@
               <h3>Photo booth skateboard</h3>
               <p>Thundercats pour-over four loko skateboard Brooklyn, Etsy sriracha leggings dreamcatcher narwhal authentic 3 wolf moon synth Portland. Shabby chic photo booth Blue Bottle keffiyeh, McSweeney's roof party Carles.</p>
             </figcaption>
-            <img src="img/large/2.png" alt="img02"/> </figure>
+<!--            <img src="img/large/2.png" alt="img02"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -361,7 +416,8 @@
               <h3>Ex fashion axe</h3>
               <p>Ennui Blue Bottle shabby chic, organic butcher High Life tattooed meggings jean shorts Brooklyn sartorial polaroid. Cray raw denim +1, bespoke High Life Odd Future banh mi chillwave Marfa kogi disrupt paleo direct trade 90's Godard. </p>
             </figcaption>
-            <img src="img/large/3.png" alt="img03"/> </figure>
+<!--            <img src="img/large/3.png" alt="img03"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -369,7 +425,8 @@
               <h3>Thundercats next level</h3>
               <p>Typewriter authentic PBR, iPhone mixtape fixie post-ironic fingerstache Pitchfork artisan. Wayfarers master cleanse occupy, Tonx lo-fi swag Truffaut irony whatever Blue Bottle readymade PBR gluten-free. Lomo Pinterest Banksy fap. Retro ennui you probably haven't heard of them iPhone, PBR fashion axe polaroid.</p>
             </figcaption>
-            <img src="img/large/4.png" alt="img04"/> </figure>
+<!--            <img src="img/large/4.png" alt="img04"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -377,7 +434,8 @@
               <h3>Bushwick selvage synth</h3>
               <p>Schlitz deserunt pour-over consectetur. Selfies plaid asymmetrical farm-to-table, cred gastropub photo booth narwhal non roof party velit raw denim slow-carb meggings pug. Tempor post-ironic seitan cliche bicycle rights. Meh viral Williamsburg, quinoa 8-bit kale chips YOLO Marfa accusamus.</p>
             </figcaption>
-            <img src="img/large/5.png" alt="img05"/> </figure>
+<!--            <img src="img/large/5.png" alt="img05"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -385,7 +443,8 @@
               <h3>Bottle wayfarers locavore</h3>
               <p>Aliqua High Life art party fixie farm-to-table. Kitsch Echo Park shabby chic, narwhal fugiat Cosby sweater asymmetrical gastropub tofu. Authentic minim Pinterest Blue Bottle beard, aliqua chia XOXO dolor freegan banh mi vegan fugiat.</p>
             </figcaption>
-            <img src="img/large/1.png" alt="img01"/> </figure>
+<!--            <img src="img/large/1.png" alt="img01"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -393,7 +452,8 @@
               <h3>Letterpress asymmetrical</h3>
               <p>Pickled hoodie Pinterest 90's proident church-key chambray. Salvia incididunt slow-carb ugh skateboard velit, flannel authentic hoodie lomo fixie photo booth farm-to-table. Minim meggings Bushwick, semiotics Vice put a bird.</p>
             </figcaption>
-            <img src="img/large/1.png" alt="img01"/> </figure>
+<!--            <img src="img/large/1.png" alt="img01"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -401,7 +461,8 @@
               <h3>Vice velit chia</h3>
               <p>Tattooed assumenda chambray cray officia. 90's mollit ethnic church-key ex eu pop-up gentrify. Tonx raw denim eu, bitters nesciunt distillery Neutra pop-up. Drinking vinegar Helvetica Truffaut tattooed.</p>
             </figcaption>
-            <img src="img/large/2.png" alt="img02"/> </figure>
+<!--            <img src="img/large/2.png" alt="img02"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -409,7 +470,8 @@
               <h3>Brunch semiotics</h3>
               <p>Gentrify High Life adipisicing, duis slow-carb kogi Tumblr raw denim freegan Echo Park. Fingerstache laboris pork belly messenger bag, you probably haven't heard of them vegan twee Intelligentsia Vice Etsy pickled put a bird on it Godard roof party. Meggings small batch dreamcatcher velit.</p>
             </figcaption>
-            <img src="img/large/3.png" alt="img03"/> </figure>
+<!--            <img src="img/large/3.png" alt="img03"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -417,7 +479,8 @@
               <h3>Chillwave nihil occupy</h3>
               <p>Marfa exercitation non, beard +1 hashtag cardigan gluten-free mixtape church-key ugh eu Portland leggings. Ennui farm-to-table fingerstache keytar Echo Park tattooed. Seitan qui artisan, aliquip cupidatat sunt Portland wayfarers duis.</p>
             </figcaption>
-            <img src="img/large/4.png" alt="img04"/> </figure>
+<!--            <img src="img/large/4.png" alt="img04"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -425,7 +488,8 @@
               <h3>Kale chips lomo biodiesel</h3>
               <p>Lomo church-key whatever, seitan laborum drinking vinegar lo-fi semiotics nihil meh. Skateboard irure before they sold out Banksy. Narwhal High Life lomo aliqua drinking vinegar. PBR&B placeat proident, craft beer forage DIY nostrud meh flexitarian keytar Helvetica.</p>
             </figcaption>
-            <img src="img/large/5.png" alt="img05"/> </figure>
+<!--            <img src="img/large/5.png" alt="img05"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -433,7 +497,8 @@
               <h3>Exercitation occaecat</h3>
               <p>Skateboard Truffaut bicycle rights seitan normcore. Culpa lo-fi ennui, Pinterest before they sold out Echo Park roof party sapiente aesthetic consequat Truffaut freegan voluptate. Kogi banh mi vero nihil, freegan gluten-free cliche. Forage Etsy laboris anim normcore, McSweeney's ex.</p>
             </figcaption>
-            <img src="img/large/6.png" alt="img06"/> </figure>
+<!--            <img src="img/large/6.png" alt="img06"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -441,7 +506,8 @@
               <h3>Selfies viral four</h3>
               <p>Viral roof party locavore flexitarian nihil fanny pack actually Odd Future anim commodo. Sunt yr aute, enim quis plaid sartorial duis leggings lo-fi gluten-free. Tote bag flexitarian pug stumptown, Cosby sweater try-hard ethnic scenester. Mumblecore +1 hoodie accusamus skateboard slow-carb, Thundercats Godard placeat craft beer meh enim trust fund.</p>
             </figcaption>
-            <img src="img/large/1.png" alt="img01"/> </figure>
+<!--            <img src="img/large/1.png" alt="img01"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -449,7 +515,8 @@
               <h3>Photo booth skateboard</h3>
               <p>Culpa pour-over cray nesciunt dreamcatcher. Meggings distillery cillum raw denim voluptate, single-origin coffee lo-fi ethical iPhone four loko nihil salvia. Biodiesel ea Intelligentsia quis deep v, American Apparel trust fund slow-carb synth semiotics quinoa Brooklyn pour-over nulla Godard.</p>
             </figcaption>
-            <img src="img/large/2.png" alt="img02"/> </figure>
+<!--            <img src="img/large/2.png" alt="img02"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -457,7 +524,8 @@
               <h3>Ex fashion axe</h3>
               <p>Bespoke irony tousled nihil flexitarian, salvia tempor nostrud Bushwick hashtag Austin ethnic disrupt. Beard Helvetica nihil, chia craft beer Wes Anderson keytar dolore. Irure incididunt flexitarian photo booth cillum, YOLO deserunt Brooklyn artisan. Brunch assumenda irony, Blue Bottle roof party DIY ullamco quis.</p>
             </figcaption>
-            <img src="img/large/3.png" alt="img03"/> </figure>
+<!--            <img src="img/large/3.png" alt="img03"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -467,7 +535,8 @@
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
             </figcaption>
-            <img src="img/large/4.png" alt="img04"/> </figure>
+<!--            <img src="img/large/4.png" alt="img04"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -475,7 +544,8 @@
               <h3>Bushwick selvage synth</h3>
               <p>Ethical Truffaut tofu food truck cred cornhole. Irure umami Austin cornhole blog ethical. Aliqua yr Truffaut, adipisicing hashtag Shoreditch eiusmod tempor literally vinyl.</p>
             </figcaption>
-            <img src="img/large/5.png" alt="img05"/> </figure>
+<!--            <img src="img/large/5.png" alt="img05"/> -->
+            </figure>
         </li>
         <li>
           <figure>
@@ -483,7 +553,8 @@
               <h3>Bottle wayfarers locavore</h3>
               <p>Pork belly irony Shoreditch fashion axe DIY. Portland banjo irony, squid gentrify Austin fixie church-key magna. Marfa artisan Echo Park, McSweeney's banjo sunt keytar tofu. Brooklyn PBR single-origin coffee disrupt polaroid ut, gluten-free XOXO plaid magna.</p>
             </figcaption>
-            <img src="img/large/1.png" alt="img01"/> </figure>
+<!--            <img src="img/large/1.png" alt="img01"/> -->
+            </figure>
         </li>
       </ul>
       <nav> 

@@ -58,6 +58,7 @@
 .grid figcaption {
 	background: #e4e4e4;
 	padding: 25px;
+    border-radius: 8px;
 }
 
 /* Slideshow style */
@@ -320,24 +321,7 @@ span.nav-close:before {
 /*@media only screen and (min-width: 481px) {}*/
 
 
-/*如果屏幕小于等于400px*/
-@media only screen and (max-width: 400px) {
-	.grid li {width: 100%;padding: 8px;}    
-    .grid-wrap {margin: 64px 8px;}
-}
-@media only screen and (min-width: 401px) and (max-width: 703px) {
-	.grid li {width: 50%;padding: 8px;}
-    .grid-wrap {margin: 64px 8px;}
-}
-@media only screen and (min-width: 704px) {
-    .grid li {width: 336px;padding: 8px;}
-    .grid-wrap {width: 1008px;}
-}
-@media only screen and (min-width: 1056px) {
-}
-@media only screen and (min-width: 1408px) {
-    .grid-wrap {width: 1345px;}
-}
+
 
 
 
