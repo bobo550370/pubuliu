@@ -36,9 +36,9 @@
 
 /* Grid style */
 .grid-wrap {
-	max-width: 69em;
-	margin: 0 auto;
-	padding: 64px 16px;
+    widows: 100%;
+	margin: 64px auto;
+    
 }
 
 .grid {
@@ -52,7 +52,7 @@
 }
 
 .grid figure {
-	padding: 15px 0;
+/*	padding: 15px 0;*/
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
@@ -264,12 +264,9 @@ span.nav-close:before {
 }
 
 /* Example media queries (reduce number of columns and change slideshow layout) */
-
 @media screen and (max-width: 60em) {
 	/* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
-	.grid li {
-		width: 33.3%;
-	}
+/*	.grid li {width: 33.3%;}*/
 
 	.slideshow li {
 		width: 100%;
@@ -297,14 +294,58 @@ span.nav-close:before {
 
 }
 
+/*
 @media screen and (max-width: 35em) {
-	.grid li {
-		width: 50%;
-	}
+	.grid li {width: 50%;}
 }
 
 @media screen and (max-width: 24em) {
-	.grid li {
-		width: 100%;
-	}
+	.grid li {width: 100%;}
 }
+*/
+
+
+
+@media only screen and (min-width: 400px) {
+    html {font-size: 21.33333333px !important;}
+}
+@media only screen and (min-width: 414px) {
+    html {font-size: 22.08px !important;}
+}
+@media only screen and (min-width: 480px) {
+    html {font-size: 25.6px !important;}
+}
+
+
+
+
+
+/*@media only screen and (min-width: 320px) {}*/
+/*@media only screen and (min-width: 375px) {}*/
+
+/*如果屏幕小于等于400px*/
+@media only screen and (max-width: 400px) {
+	.grid li {width: 100%;}    
+}
+/*@media only screen and (min-width: 414px) {}*/
+
+
+@media only screen and (min-width: 401px) and (max-width: 703px) {
+	.grid li {width: 50%;}
+}
+
+/*@media only screen and (min-width: 481px) {}*/
+
+@media only screen and (min-width: 704px) {
+    .grid li {width: 336px;padding: 8px;}
+    .grid-wrap {width: 1008px;}
+}
+@media only screen and (min-width: 1056px) {
+}
+@media only screen and (min-width: 1408px) {
+    .grid-wrap {width: 1345px;}
+}
+
+
+
+
