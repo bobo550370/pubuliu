@@ -37,18 +37,12 @@
 /* Grid style */
 .grid-wrap {
     widows: 100%;
-	margin: 64px auto;
-    
+	margin: 64px auto;   
 }
-
-.grid {
-	margin: 0 auto;
-}
-
+.grid {margin: 0 auto;}
 .grid li {
-	width: 25%;
 	float: left;
-	cursor: pointer;
+/*	cursor: pointer;*/
 }
 
 .grid figure {
