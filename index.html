@@ -85,7 +85,11 @@
             .text {font-size: 12px;margin-top: 8px;padding: 0 4px;}
             .header, .footer {background-color: #fff;}
             .slideshow figure {padding: 0;background-color: rgb(255, 255, 255);}
-            
+            .grid li:active figure {
+                box-shadow: 0 0 0 8px rgba(0,0,0,0.03);
+                border-radius: 8px;
+                background-color: rgba(0,0,0,0.03);
+            }
         }
         @media only screen and (min-width: 401px) and (max-width: 703px) {
             .grid li {width: 50%;padding: 8px;}
@@ -99,13 +103,18 @@
             .grid li {width: 260px;padding: 12px;}
             .slideshow figcaption,.grid-wrap {width: 1040px;}
             .slideshow figcaption {margin: 0 auto;}
-        }
+            .grid li:hover figure {
+                box-shadow: 0 0 0 8px rgba(0,0,0,0.03);
+                border-radius: 8px;
+                background-color: rgba(0,0,0,0.03);
+                }
+            }
         @media only screen and (min-width: 1300px) {
             .grid-wrap {width: 1300px;}
-        }
+            }
         @media only screen and (min-width: 1560px) {
             .grid-wrap {width: 1560px;}
-        }
+            }
     </style>
 </head>
     
