@@ -779,7 +779,11 @@
 <script src="js/classie.js"></script> 
 <script src="js/cbpGridGallery.js"></script> 
 <script>
-			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-		</script>
+    new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+    var a = document.getElementsByTagName('a');
+    for (var i = 0; i < a.length; i++) {
+        a[i].addEventListener('touchstart', function() {}, false);
+    }
+</script>
 </body>
 </html>
